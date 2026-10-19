@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* Header com glassmorphism */
+.header {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    color: #888888;
+    margin-top: 10px;
+}
+
+/* Layout Principal com Grid */
+.container {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: -40px auto;
+    padding: 0 20px;
+}
+
+/* Cards com efeitos Hover */
+.artigo-destaque {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.artigo-destaque:hover {
+    transform: translateY(-5px);
+}
+
+.artigo-destaque h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.data {
+    color: #888888;
+    font-size: 14px;
+}
+
+.leia-mais {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.leia-mais-summary {
+    color: #8e2de2;
+    cursor: pointer;
+}
+
+/* Seção de vídeo */
+.secao-video {
+    text-align: center;
+}
+
+.video-container {
+    border-radius: 12px;
+    border: 1px solid #ffffff;
+    margin-top: 20px;
+}
+
+/* Newsletter com gradiente */
+.newsletter-box {
+    background: linear-gradient(135deg, #1b003a, #1a1a2e);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.form-newsletter input,
+.form-newsletter select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.checkbox-group {
+    margin: 10px 0;
+}
+
+.btn-destaque {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-destaque:hover {
+    transform: scale(1.02);
+}
+
+/* Rodapé e Redes Sociais */
+.rodape {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #888888;
+}
+
+.rodape a {
+    color: #8e2de2;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .conteudo {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .artigo-destaque {
+        grid-column: span 2;
+    }
+}
